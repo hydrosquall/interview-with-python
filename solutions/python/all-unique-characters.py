@@ -4,9 +4,9 @@ import unittest
 
 def all_unique(string):
     
-    # Optimization that assumes only 255 ASCII characters are possible (ignores possibility of unicode)
+    # Optimization that assumes only 256 (2^8) ASCII characters are possible (ignores possibility of unicode)
     nLetters = len(letters)
-    if (nLetters > 255):
+    if (nLetters > 256):
         return False
     
     letters = sorted(string)
